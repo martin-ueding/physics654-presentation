@@ -34,7 +34,8 @@ $(build)/%.pdf: $(build)/page/%.pdf
 	pdfcrop $< $@
 
 %.pdf: %.tex header.sty
-	cd $$(dirname $@) && lualatex --halt-on-error $$(basename $<)
+	cd $$(dirname $@) \
+	    && latexmk -pdflatex='lualatex -halt-on-error $$O $$S' -pdf $$(basename $<)
 
 clean:
 	$(RM) *-blx.bib
