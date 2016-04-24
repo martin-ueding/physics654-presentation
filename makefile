@@ -39,10 +39,11 @@ $(build)/%.pdf: $(build)/page/%.pdf
 
 clean:
 	$(RM) *-blx.bib
-	$(RM) *.aux
+	$(RM) *.aux *.bbl *.nav *.snm
 	$(RM) *.log
 	$(RM) *.run.xml
 	$(RM) *.out
 	$(RM) *.svg
 	$(RM) *.pdf
 	$(RM) -r build
+	latexmk -C
