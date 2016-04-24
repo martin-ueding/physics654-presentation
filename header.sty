@@ -327,13 +327,7 @@
     \IfFileExists{\bibliographyfile}{
         \bibliography{\bibliographyfile}
         \@ifclassloaded{beamer}
-        {
-            \AtEndDocument{
-                \begin{frame}
-                    \printbibliography
-                \end{frame}
-            }
-        }
+        {}
         {
             \AtEndDocument{\printbibliography}
         }

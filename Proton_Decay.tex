@@ -6,6 +6,9 @@
 
 \usepackage[bibatend]{header}
 
+\DeclareSIUnit\year{yr}
+
+
 \renewcommand\iup{\text i}
 \renewcommand\eup{\text e}
 
@@ -30,11 +33,41 @@
 
 \subsection{Georgi-Glashow model}
 
+\subsection{Pati-Salam}
+
 \begin{frame}
-    
+    \parencite{Wu/Proton_decay}
 \end{frame}
 
 \section{Experimental evidence}
+
+\subsection{Quick estimation}
+
+\begin{frame}
+    \begin{block}{Observation}
+        Our bodies are not very radioactive.
+    \end{block}
+
+    \pause
+
+    \begin{block}{Proton lifetime}
+        \begin{itemize}
+            \item We would notice \SI{1}{\sievert\per\year}
+            \item Body consists half of protons
+            \item Proton lifetime greater than \SI{7e23}{\second} or \SI{2e16}{\year}
+        \end{itemize}
+    \end{block}
+
+    \nocite{wikipedia/groessenordnung-aequivalentdosis}
+\end{frame}
+
+\subsection{Super Kamiokande}
+
+\begin{frame}
+    References
+
+    \printbibliography
+\end{frame}
 
 \end{document}
 
