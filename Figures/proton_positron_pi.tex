@@ -1,0 +1,20 @@
+\feynmandiagram[%
+    layered layout,
+    horizontal=u1 to x1,
+]
+{
+    u1[particle=u] -- x1[dot];
+    x1 --[dashed, edge label=X] x2[dot];
+    x1 --[edge label'=$\bar{\mathsf u}$] fusion[dot];
+    x2 --[anti fermion] e[particle=$\mathsf e^+$];
+    x2 --[edge label=$\bar{\mathsf u}$] fusion;
+
+
+    fusion --[double] pi[dot];
+    pi --[photon] gamma1[particle=$\gammaup$];
+    pi --[photon] gamma2[particle=$\gammaup$];
+
+    u2[particle=u] -- fusion;
+    d[particle=d] -- fusion;
+    {[same layer] u1, u2, d};
+};

@@ -2,13 +2,13 @@
 
 .PRECIOUS: %.tex %.pdf build/page/%.pdf
 
+build := _build
+
 document_tex := Proton_Decay.tex
 document_pdf := $(document_tex:%.tex=%.pdf)
 
 figures_tex := $(wildcard Figures/*.tex)
-figures_pdf := $(figures_tex:Figures/%.tex=build/%.pdf)
-
-build := _build
+figures_pdf := $(figures_tex:Figures/%.tex=$(build)/%.pdf)
 
 figures: $(figures_pdf)
 
@@ -28,7 +28,7 @@ $(build):
 	mkdir -p $(build)/page
 
 $(build)/page/%.tex: Figures/%.tex
-	tikzpicture_wrap.py $< $@
+	./tikzpicture_wrap.py $< $@
 
 $(build)/%.pdf: $(build)/page/%.pdf
 	pdfcrop $< $@
@@ -45,5 +45,5 @@ clean:
 	$(RM) *.out
 	$(RM) *.svg
 	$(RM) *.pdf
-	$(RM) -r build
+	$(RM) -r $(build)
 	latexmk -C

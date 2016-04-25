@@ -1,20 +1,22 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# Copyright © 2015 Martin Ueding <dev@martin-ueding.de>
+# Copyright © 2015-2016 Martin Ueding <dev@martin-ueding.de>
 
 import argparse
 
 import jinja2
 
 template_text = r'''
-\documentclass[11pt, {{ lang }}]{scrartcl}
+\documentclass[11pt, {{ lang }}]{beamer}
 
-\usepackage{../../../header}
+\usepackage{../../header}
 
+\usepackage{tikz-feynman}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.10}
+\setbeamertemplate{navigation symbols}{}
 
 \pagestyle{empty}
 
