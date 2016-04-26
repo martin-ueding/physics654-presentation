@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+    \begin{feynman}
+        \vertex (l1) at (0, 0) {u};
+        \vertex[below=0.5cm of l1] (l2) {u};
+        \vertex[below=0.5cm of l2] (l3) {d};
+
+        \vertex[right=3cm of l1] (r1) {$\mathsf e^+$};
+        \vertex[right=3cm of l2] (r2) {$\bar{\mathsf d}$};
+        \vertex[right=3cm of l3] (r3) {$\mathsf d$};
+
+        \vertex (x1) at ($(l1)!.5!(l2) + (1, 0)$);
+        \vertex (x2) at ($(r1)!.5!(r2) - (1, 0)$);
+
+        \diagram*{
+            {[edges=fermion]
+                (l1) -- (x1),
+                (l2) -- (x1),
+                (r1) -- (x2),
+                (r2) -- (x2),
+                (l3) -- (r3),
+            },
+            (x1) --[photon, edge label=X] (x2);
+        };
+
+        \draw[decoration={brace}, decorate] (l3.west) -- (l1.west) node[pos=0.5, left] {$\mathsf p$};
+        \draw[decoration={brace}, decorate] (r2.east) -- (r3.east) node[pos=0.5, right] {$\piup^0$};
+    \end{feynman}
+\end{tikzpicture}
