@@ -1,0 +1,11 @@
+\feynmandiagram[%
+    horizontal=d to v1,
+    tree layout,
+]
+{
+    d[particle=d] --[fermion] v1[dot];
+    v1 --[fermion] u[particle=u];
+    v1 --[photon, edge label=$\mathsf W^-$] v2;
+    v2 --[fermion] e[particle=$\mathsf e^-$];
+    v2 --[anti fermion] nu[particle=$\bar\nuup_{\mathsf e}$];
+};
