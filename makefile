@@ -10,10 +10,11 @@ document_pdf := $(document_tex:%.tex=%.pdf)
 figures_tex := $(wildcard Figures/*.tex)
 figures_pdf := $(figures_tex:Figures/%.tex=$(build)/%.pdf)
 
-figures: $(figures_pdf)
-
 all: $(figures_pdf)
 all: $(document_pdf)
+
+figures: $(figures_pdf)
+
 
 test:
 	@echo "document: 	$(document_pdf)"
@@ -33,9 +34,12 @@ $(build)/page/%.tex: Figures/%.tex
 $(build)/%.pdf: $(build)/page/%.pdf
 	pdfcrop $< $@
 
-%.pdf: %.tex header.sty
+$(build)/page/%.pdf: $(build)/page/%.tex header.sty
 	cd $$(dirname $@) \
 	    && latexmk -pdflatex='lualatex -halt-on-error $$O $$S' -pdf $$(basename $<)
+
+%.pdf: %.tex header.sty
+	latexmk -pdflatex='pdflatex -halt-on-error $$O $$S' -pdf $<
 
 clean:
 	$(RM) *-blx.bib

@@ -2,21 +2,20 @@
     \begin{feynman}
         \diagram[%
             layered layout,
-            horizontal=u1 to x1,
+            horizontal=x1 to x2,
         ]
         {
             u1[particle=u] --[fermion] x1[dot];
+            u2[particle=u] --[fermion] x1;
             x1 --[dashed, edge label=X] x2[dot];
-            x1 --[edge label'=$\bar{\mathsf u}$, anti fermion] fusion[dot];
             x2 -- ignored1 --[anti fermion] e[particle=$\mathsf e^+$];
-            x2 --[edge label=$\bar{\mathsf d}$, anti fermion] fusion;
+            x2 --[edge label=$\bar{\mathsf d}$, anti fermion] fusion [particle=$\piup^0$];
 
 
             fusion --[double] pi[dot];
             pi --[photon] gamma1[particle=$\gammaup$];
             pi --[photon] gamma2[particle=$\gammaup$];
 
-            u2[particle=u] --[fermion] fusion;
             d[particle=d] -- [fermion]fusion;
             {[same layer] u1, u2, d};
             %{[same layer] gamma1, gamma2, e};

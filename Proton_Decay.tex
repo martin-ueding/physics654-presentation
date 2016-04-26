@@ -6,19 +6,39 @@
 
 \usepackage[bibatend]{header}
 
+\newcommand\qqandqq{\qquad\text{and}\qquad}
+
 \DeclareSIUnit\year{yr}
 
+\AtBeginSection[]
+{
+    \begin{frame}
+        \sectionpage
+        \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/shaded/hide, subsubsectionstyle=hide/hide/hide]
+    \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \subsectionpage
+        \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/shaded/hide, subsubsectionstyle=hide/hide/hide]
+    \end{frame}
+}
 
 \renewcommand\iup{\text i}
 \renewcommand\eup{\text e}
 
 
+\setbeamertemplate{navigation symbols}{}
 \addtobeamertemplate{navigation symbols}{}{%
     \usebeamerfont{footline}%
     \usebeamercolor[fg]{footline}%
     \hspace{1em}%
     \insertframenumber/\inserttotalframenumber
 }
+
+\graphicspath{{_build/}{Figures/}}
 
 \title{Proton Decay}
 %\subtitle{}
@@ -31,27 +51,91 @@
     \titlepage
 \end{frame}
 
-\section{Standard Model}
+\section{Grand unified theories}
 
-\section{Motivation}
+\subsection{Motivation}
 
-\subsection{Charge of quarks and leptons}
+\begin{frame}
+    \frametitle{Charges}
 
-\subsection{Grand unification}
+    Quarks and leptons electric charges are very related:
+    \[
+        \frac{Q(\mathsf u)}{Q(\mathsf e^+)} = \frac 23
+        \qqandqq
+        \frac{Q(\mathsf d)}{Q(\mathsf e^+)} = - \frac 13
+    \]
 
-\subsection{Matter--antimatter asymmetry}
+    \pause
 
-\section{Models}
+    \begin{itemize}
+        \item QED does not need this
+        \item Begs for unification
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Matter and anti-matter asymmetry}
+
+    Why is there more matter than anti-matter?
+
+    Standard model is symmetric
+
+    Violation via GUT process?
+\end{frame}
 
 \subsection{Georgi-Glashow model}
 
-\subsection{Pati-Salam}
+\subsection{Pati-Salam model}
 
 \begin{frame}
     \parencite{Wu/Proton_decay}
 \end{frame}
 
-\section{Experimental evidence}
+\section{Proton decay}
+
+\subsection{Pion + positron}
+
+\begin{frame}
+    \frametitle{The X boson}
+
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \begin{block}{Decay modes}
+                \begin{gather*}
+                    \mathsf X \to \mathsf u + \mathsf u \\
+                    \mathsf X \to \mathsf e^+ + \bar{\mathsf d}
+                \end{gather*}
+            \end{block}
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \begin{block}{Properties}
+
+                \
+
+                \begin{tabular}{ll}
+                    Mass & $\approx \SI{e15}{\giga\electronvolt}$ \\
+                    Electric charge & $+4/3$ \\
+                    Color charge & triplet \\
+                    Spin & 1 \\
+                    Weak isospin $z$ & $+1/2$ \\
+                    Hypercharge & $5/3$ \\
+                    $B - L$ & $2/3$
+                \end{tabular}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    % https://en.wikipedia.org/wiki/X_and_Y_bosons
+\end{frame}
+
+\begin{frame}
+
+    \centering
+    \includegraphics{proton_positron_pi}
+\end{frame}
+
+
+\section{Experiments}
 
 \subsection{Quick estimation}
 
