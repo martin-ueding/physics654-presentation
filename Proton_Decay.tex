@@ -51,6 +51,46 @@
     \titlepage
 \end{frame}
 
+\begin{frame}
+    \frametitle{Standard model}
+
+    \begin{columns}[t]
+        \begin{column}{.3\linewidth}
+            \begin{block}{Fermions}
+                \
+
+                \begin{tabular}{ccc}
+                    u & c & t \\
+                    d & s & b \\
+                    \midrule
+                    $\nuup_\mathsf e$ & $\nuup_\muup$ & $\nuup_\tauup$ \\
+                    $\mathsf e^-$ & $ \muup^-$ & $\tauup^-$
+                \end{tabular}
+            \end{block}
+        \end{column}
+        \begin{column}{.7\linewidth}
+            \begin{block}{Bosons}
+                \
+
+                \begin{tabular}{llll}
+                    Group & Force & Property & Carrier \\
+                    \midrule
+                    $\mathsf{SU}(3)$ & Strong & Color & Gluon \\
+                    $\mathsf{SU}(2)$ & Weak & Weak Isospin & W, Z \\
+                    $\mathsf{SU}(1)$ & EM & Hypercharge & B, $\gammaup$
+                \end{tabular}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \
+
+    \begin{block}{Gauge group}
+        $\mathsf{SU}(3) \times \mathsf{SU}(2) \times \mathsf{SU}(1)$
+    \end{block}
+
+\end{frame}
+
 \section{Grand unified theories}
 
 \subsection{Motivation}
@@ -67,13 +107,33 @@
 
     \pause
 
+    And most strikingly:
+    \[
+        \frac{Q(\mathsf p)}{Q(\mathsf e^+)} = 1
+    \]
+
+    \pause
+
     \begin{itemize}
         \item QED does not need this
         \item Begs for unification
+        \item Be careful with anthropic principle!
     \end{itemize}
 \end{frame}
 
 \begin{frame}
+    \frametitle{Number of particles}
+
+    \begin{itemize}
+        \item Two quarks per generation
+        \item Two leptons per generation
+        \item Three generations of quarks and leptons
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    % TODO Does this really apply?
+
     \frametitle{Matter and anti-matter asymmetry}
 
     Why is there more matter than anti-matter?
@@ -84,6 +144,49 @@
 \end{frame}
 
 \subsection{Georgi-Glashow model}
+
+\begin{frame}
+    Particles are basis vectors of irreps.
+\end{frame}
+
+\begin{frame}
+    \frametitle{Multiplets of SU(5)}
+    \[
+        \begin{pmatrix}
+            \bar\nuup_\mathsf L
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+            \mathsf e^+_\mathsf R \\
+            \bar\nuup_\mathsf R \\
+            \mathsf d_\mathsf R
+        \end{pmatrix}
+        \quad
+        \begin{pmatrix}
+            \mathsf e^+_\mathsf L \\
+            \mathsf u_\mathsf L \\
+            \mathsf d_\mathsf L \\
+            \bar{\mathsf u}_\mathsf L
+        \end{pmatrix}
+        \quad
+        \begin{pmatrix}
+            \mathsf e^-_\mathsf R \\
+            \bar{\mathsf u}_\mathsf R \\
+            \bar{\mathsf d}_\mathsf R \\
+            \mathsf u_\mathsf R
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+            \nuup_\mathsf L \\
+            \mathsf e^-_\mathsf L \\
+            \bar{\mathsf d}_\mathsf L
+        \end{pmatrix}
+        \qquad
+        \begin{pmatrix}
+            \nuup_\mathsf R
+        \end{pmatrix}
+    \]
+\end{frame}
 
 \subsection{Pati-Salam model}
 
