@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \begin{semilogxaxis}[
+            width=0.9\textwidth,
+            height=0.6\textwidth,
+            xlabel={$Q / \si{\giga\electronvolt}$},
+            ylabel={$\alpha_i\inv$},
+            legend pos=south east,
+        ]
+        \addplot[blue] table {../../running-1.txt};
+        \addplot[green] table {../../running-2.txt};
+        \addplot[red] table {../../running-3.txt};
+
+        \addlegendentry{U(1)}
+        \addlegendentry{SU(2)}
+        \addlegendentry{SU(3)}
+    \end{semilogxaxis}
+\end{tikzpicture}

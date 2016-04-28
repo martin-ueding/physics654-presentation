@@ -30,6 +30,9 @@
 \renewcommand\iup{\text i}
 \renewcommand\eup{\text e}
 
+%\setbeamersize{text margin left=2.5em}
+\setbeamertemplate{bibliography item}[text]
+
 
 \setbeamertemplate{navigation symbols}{}
 %\addtobeamertemplate{navigation symbols}{}{%
@@ -130,6 +133,13 @@
         \item Two leptons per generation
         \item Three generations of quarks and leptons
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Running of the coupling}
+
+    \centering
+    \includegraphics{running}
 \end{frame}
 
 \begin{frame}
@@ -309,6 +319,7 @@
     \end{itemize}
 
     % TODO http://www-sk.icrr.u-tokyo.ac.jp/sk/sk/index-e.html
+    \parencite{super-k/overview}
 \end{frame}
 
 \begin{frame}
@@ -322,6 +333,7 @@
     \centering
     \includegraphics[width=0.8\linewidth]{Figures/epi0_nice_event.png}
     % TODO http://hep.bu.edu/~superk/pdk.html
+    \parencite{boston_university/proton_decay}
 \end{frame}
 
 \begin{frame}
@@ -329,11 +341,11 @@
 \end{frame}
 
 
+\nocite{tikz-feynman}
+
 \section*{References}
 
-\begin{frame}
-
-    \nocite{tikz-feynman}
+\begin{frame}[allowframebreaks]
 
     \printbibliography
 \end{frame}
