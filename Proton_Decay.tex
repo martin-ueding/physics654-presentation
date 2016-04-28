@@ -35,6 +35,10 @@
     \end{frame}
 }
 
+\colorlet{qred}{red!75!black}
+\colorlet{qgreen}{green!75!black}
+\colorlet{qblue}{blue!75!black}
+
 \renewcommand\iup{\text i}
 \renewcommand\eup{\text e}
 
@@ -105,6 +109,100 @@
 
 \end{frame}
 
+\subsection{Lie algebras}
+
+\begin{frame}
+    \frametitle{Group representation}
+    \framesubtitle{Definition}
+
+    \begin{itemize}
+        \item Representation $D^\Gamma$ maps group elements to linear operators
+        \item Must not be faithful
+        \item Multiple representations $\Gamma$ possible
+    \end{itemize}
+
+    \
+
+    \begin{center}
+        \includegraphics{representation}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Group representation}
+    \framesubtitle{Example}
+    
+    \begin{columns}
+        \begin{column}{.6\linewidth}
+            Take group SO(2). Represent on $\R^3$:
+            \[
+                D(g_\phi) =
+                \begin{pmatrix}
+                    \cos(\phi) & - \sin(\phi) & 0 \\
+                    \sin(\phi) & \cos(\phi) & 0 \\
+                    0 & 0 & 1
+                \end{pmatrix}
+            \]
+
+            Acts on $(x, y, z)^\mathsf T \in \R^3$
+        \end{column}
+        \pause
+        \begin{column}{.4\linewidth}
+            \begin{itemize}
+                \item $\{ x, y \}$ is a doublet
+                \item $\{ z \}$ is a singlet
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Group representation}
+    \framesubtitle{Standard model}
+
+    \begin{columns}[t]
+        \begin{column}{.55\textwidth}
+
+            \begin{itemize}
+                \item Color, SU(3) is represented on $\C^3$
+                \item Weak isospin, SU(2) on $\C^2$
+            \end{itemize}
+
+            Can we combine that to $\C^5$?
+
+            \pause
+
+            We can! Let $C \in \mathsf{SU}(3)$ and $W \in \mathsf{SU}(2)$.
+            \pause
+            \[
+                \begin{pmatrix}
+                    W & 0 \\
+                    0 & 1
+                \end{pmatrix}
+                \qqandqq
+                \begin{pmatrix}
+                    1 & 0 \\
+                    0 & C
+                \end{pmatrix}
+            \]
+
+            Acts on $(\nuup_\mathsf L, \mathsf e^-_\mathsf L,
+            \bar{\textcolor{qred}{\mathsf d}}_\mathsf L,
+            \bar{\textcolor{qgreen}{\mathsf d}}_\mathsf L,
+            \bar{\textcolor{qblue}{\mathsf d}}_\mathsf L)^\mathsf T$.
+        \end{column}
+        \pause
+        \begin{column}{.45\textwidth}
+            \begin{itemize}
+                \item Lepton part doublet under $W$.
+                \item Quark part \enquote{trivial} under $W$.
+                \item Lepton part trivial under $C$.
+                \item Quark part triplet under $C$.
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
 \section{Grand unified theories}
 
 \subsection{Motivation}
@@ -147,6 +245,30 @@
 
 \begin{frame}
     \frametitle{Running of the coupling}
+    \framesubtitle{The familiar graph}
+
+    {
+        \centering
+        \includegraphics{running}
+    }
+
+    \parencite{Peskin/1997ez}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Running of the coupling}
+    \framesubtitle{Where it comes from}
+
+    \includegraphics{loop} 
+
+    \
+
+    \includegraphics{loop2} 
+\end{frame}
+
+\begin{frame}
+    \frametitle{Running of the coupling}
+    \framesubtitle{The familiar graph (again)}
 
     {
         \centering
@@ -184,43 +306,43 @@
         \begin{pmatrix}
             \mathsf e^+_\mathsf R \\
             \bar\nuup_\mathsf R \\
-            \textcolor{red}  {\mathsf d}_\mathsf R \\
-            \textcolor{green}{\mathsf d}_\mathsf R \\
-            \textcolor{blue} {\mathsf d}_\mathsf R
+            \textcolor{qred}  {\mathsf d}_\mathsf R \\
+            \textcolor{qgreen}{\mathsf d}_\mathsf R \\
+            \textcolor{qblue} {\mathsf d}_\mathsf R
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
             \mathsf e^+_\mathsf L \\
-            \textcolor{red}  {\mathsf u}_\mathsf L \\
-            \textcolor{green}{\mathsf u}_\mathsf L \\
-            \textcolor{blue} {\mathsf u}_\mathsf L \\
-            \textcolor{red}  {\mathsf d}_\mathsf L \\
-            \textcolor{green}{\mathsf d}_\mathsf L \\
-            \textcolor{blue} {\mathsf d}_\mathsf L \\
-            \bar{\textcolor{red}  {\mathsf u}}_\mathsf L \\
-            \bar{\textcolor{green}{\mathsf u}}_\mathsf L \\
-            \bar{\textcolor{blue} {\mathsf u}}_\mathsf L
+            \textcolor{qred}  {\mathsf u}_\mathsf L \\
+            \textcolor{qgreen}{\mathsf u}_\mathsf L \\
+            \textcolor{qblue} {\mathsf u}_\mathsf L \\
+            \textcolor{qred}  {\mathsf d}_\mathsf L \\
+            \textcolor{qgreen}{\mathsf d}_\mathsf L \\
+            \textcolor{qblue} {\mathsf d}_\mathsf L \\
+            \bar{\textcolor{qred}  {\mathsf u}}_\mathsf L \\
+            \bar{\textcolor{qgreen}{\mathsf u}}_\mathsf L \\
+            \bar{\textcolor{qblue} {\mathsf u}}_\mathsf L
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
             \mathsf e^-_\mathsf R \\
-            \bar{\textcolor{red}  {\mathsf u}}_\mathsf R \\
-            \bar{\textcolor{green}{\mathsf u}}_\mathsf R \\
-            \bar{\textcolor{blue} {\mathsf u}}_\mathsf R \\
-            \bar{\textcolor{red}  {\mathsf d}}_\mathsf R \\
-            \bar{\textcolor{green}{\mathsf d}}_\mathsf R \\
-            \bar{\textcolor{blue} {\mathsf d}}_\mathsf R \\
-            \textcolor{red}  {\mathsf u}_\mathsf R \\
-            \textcolor{green}{\mathsf u}_\mathsf R \\
-            \textcolor{blue} {\mathsf u}_\mathsf R
+            \bar{\textcolor{qred}  {\mathsf u}}_\mathsf R \\
+            \bar{\textcolor{qgreen}{\mathsf u}}_\mathsf R \\
+            \bar{\textcolor{qblue} {\mathsf u}}_\mathsf R \\
+            \bar{\textcolor{qred}  {\mathsf d}}_\mathsf R \\
+            \bar{\textcolor{qgreen}{\mathsf d}}_\mathsf R \\
+            \bar{\textcolor{qblue} {\mathsf d}}_\mathsf R \\
+            \textcolor{qred}  {\mathsf u}_\mathsf R \\
+            \textcolor{qgreen}{\mathsf u}_\mathsf R \\
+            \textcolor{qblue} {\mathsf u}_\mathsf R
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
             \nuup_\mathsf L \\
             \mathsf e^-_\mathsf L \\
-            \bar{\textcolor{red}  {\mathsf d}}_\mathsf L \\
-            \bar{\textcolor{green}{\mathsf d}}_\mathsf L \\
-            \bar{\textcolor{blue} {\mathsf d}}_\mathsf L
+            \bar{\textcolor{qred}  {\mathsf d}}_\mathsf L \\
+            \bar{\textcolor{qgreen}{\mathsf d}}_\mathsf L \\
+            \bar{\textcolor{qblue} {\mathsf d}}_\mathsf L
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
@@ -305,11 +427,14 @@
 
     \begin{center}
         \includegraphics{proton-x-pi-1}
+        \pause
         \hfill
         \includegraphics{proton-x-pi-2}
     \end{center}
 
-    Gives $\mathsf p \to \piup^0 + \mathsf e^+$
+    \begin{center}
+        Gives $\mathsf p \to \piup^0 + \mathsf e^+$
+    \end{center}
 \end{frame}
 
 

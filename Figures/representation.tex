@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+    \node (g) {$g$};
+    \node[right=of g] (h) {$h$};
+    \node[right=of h] (gh) {$gh$};
+
+    \node[below=of g] (Dg) {$D(g)$};
+    \node[below=of h] (Dh) {$D(h)$};
+    \node[below=of gh] (Dgh) {$D(gh)$};
+
+    \node at ($(g)!.5!(h)$) {$\cdot$};
+    \node at ($(Dg)!.5!(Dh)$) {$\cdot$};
+
+    \node at ($(h)!.5!(gh)$) {$=$};
+    \node at ($(Dh)!.5!(Dgh)$) {$=$};
+
+    \draw[->] (g) -- (Dg) node[midway, right] {$D$};
+    \draw[->] (h) -- (Dh) node[midway, right] {$D$};
+    \draw[->] (gh) -- (Dgh) node[midway, right] {$D$};
+\end{tikzpicture}

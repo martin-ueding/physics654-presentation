@@ -1,0 +1,15 @@
+\feynmandiagram[%
+    horizontal=a to b,
+]
+{
+    in1 --[fermion] a;
+    in2 --[anti fermion] a;
+    b --[fermion] out1;
+    b --[anti fermion] out2;
+
+    a --[gluon] v1;
+    v2 --[gluon] b;
+
+    v1 --[half left, fermion] v2;
+    v2 --[half left, fermion] v1;
+};
