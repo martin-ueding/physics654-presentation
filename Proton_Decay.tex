@@ -109,100 +109,6 @@
 
 \end{frame}
 
-\subsection{Lie algebras}
-
-\begin{frame}
-    \frametitle{Group representation}
-    \framesubtitle{Definition}
-
-    \begin{itemize}
-        \item Representation $D^\Gamma$ maps group elements to linear operators
-        \item Must not be faithful
-        \item Multiple representations $\Gamma$ possible
-    \end{itemize}
-
-    \
-
-    \begin{center}
-        \includegraphics{representation}
-    \end{center}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Group representation}
-    \framesubtitle{Example}
-    
-    \begin{columns}
-        \begin{column}{.6\linewidth}
-            Take group SO(2). Represent on $\R^3$:
-            \[
-                D(g_\phi) =
-                \begin{pmatrix}
-                    \cos(\phi) & - \sin(\phi) & 0 \\
-                    \sin(\phi) & \cos(\phi) & 0 \\
-                    0 & 0 & 1
-                \end{pmatrix}
-            \]
-
-            Acts on $(x, y, z)^\mathsf T \in \R^3$
-        \end{column}
-        \pause
-        \begin{column}{.4\linewidth}
-            \begin{itemize}
-                \item $\{ x, y \}$ is a doublet
-                \item $\{ z \}$ is a singlet
-            \end{itemize}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}
-    \frametitle{Group representation}
-    \framesubtitle{Standard model}
-
-    \begin{columns}[t]
-        \begin{column}{.55\textwidth}
-
-            \begin{itemize}
-                \item Color, SU(3) is represented on $\C^3$
-                \item Weak isospin, SU(2) on $\C^2$
-            \end{itemize}
-
-            Can we combine that to $\C^5$?
-
-            \pause
-
-            We can! Let $C \in \mathsf{SU}(3)$ and $W \in \mathsf{SU}(2)$.
-            \pause
-            \[
-                \begin{pmatrix}
-                    W & 0 \\
-                    0 & 1
-                \end{pmatrix}
-                \qqandqq
-                \begin{pmatrix}
-                    1 & 0 \\
-                    0 & C
-                \end{pmatrix}
-            \]
-
-            Acts on $(\nuup_\mathsf L, \mathsf e^-_\mathsf L,
-            \bar{\textcolor{qred}{\mathsf d}}_\mathsf L,
-            \bar{\textcolor{qgreen}{\mathsf d}}_\mathsf L,
-            \bar{\textcolor{qblue}{\mathsf d}}_\mathsf L)^\mathsf T$.
-        \end{column}
-        \pause
-        \begin{column}{.45\textwidth}
-            \begin{itemize}
-                \item Lepton part doublet under $W$.
-                \item Quark part \enquote{trivial} under $W$.
-                \item Lepton part trivial under $C$.
-                \item Quark part triplet under $C$.
-            \end{itemize}
-        \end{column}
-    \end{columns}
-\end{frame}
-
 \section{Grand unified theories}
 
 \subsection{Motivation}
@@ -290,14 +196,153 @@
     Violation via GUT process?
 \end{frame}
 
+\subsection{Lie algebras}
+
+\begin{frame}
+    \frametitle{Lie group}
+
+    \begin{itemize}
+        \item A continuous symmetry group
+        \item Matrix groups like SU($N$), SO($N$), GL, SL
+        \item Fundamental representation
+        \item Manifold structure
+        \item Algebra and tangent space
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Group representation}
+    \framesubtitle{Definition}
+
+    \begin{itemize}
+        \item Representation $D^\Gamma$ maps group elements to linear operators
+        \item Must not be faithful
+        \item Multiple representations $\Gamma$ possible
+    \end{itemize}
+
+    \
+
+    \begin{center}
+        \includegraphics{representation}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Group representation}
+    \framesubtitle{Example}
+    
+    \begin{columns}
+        \begin{column}{.6\linewidth}
+            Take group SO(2). Represent on $\R^3$:
+            \[
+                D(g_\phi) =
+                \begin{pmatrix}
+                    \cos(\phi) & - \sin(\phi) & 0 \\
+                    \sin(\phi) & \cos(\phi) & 0 \\
+                    0 & 0 & 1
+                \end{pmatrix}
+            \]
+
+            Acts on $(x, y, z)^\mathsf T \in \R^3$
+        \end{column}
+        \pause
+        \begin{column}{.4\linewidth}
+            \begin{itemize}
+                \item $\{ x, y \}$ is a doublet
+                \item $\{ z \}$ is a singlet
+                \item Representation is reducible
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Group representation}
+    \framesubtitle{Standard model}
+
+    \begin{columns}[t]
+        \begin{column}{.55\textwidth}
+
+            \begin{itemize}
+                \item Color, SU(3) is represented on $\C^3$
+                \item Weak isospin, SU(2) on $\C^2$
+            \end{itemize}
+
+            Can we combine that to $\C^5$?
+
+            \pause
+
+            We can! Let $C \in \mathsf{SU}(3)$ and $W \in \mathsf{SU}(2)$.
+            \pause
+            \[
+                \begin{pmatrix}
+                    W & 0 \\
+                    0 & 1
+                \end{pmatrix}
+                \qqandqq
+                \begin{pmatrix}
+                    1 & 0 \\
+                    0 & C
+                \end{pmatrix}
+            \]
+
+            Acts on $(\nuup_\mathsf L, \mathsf e^-_\mathsf L,
+            \bar{\textcolor{qred}{\mathsf d}}_\mathsf L,
+            \bar{\textcolor{qgreen}{\mathsf d}}_\mathsf L,
+            \bar{\textcolor{qblue}{\mathsf d}}_\mathsf L)^\mathsf T$.
+        \end{column}
+        \pause
+        \begin{column}{.45\textwidth}
+            \begin{itemize}
+                \item Lepton part doublet under $W$.
+                \item Quark part \enquote{trivial} under $W$.
+                \item Lepton part trivial under $C$.
+                \item Quark part triplet under $C$.
+                \item Reducible into irreps
+            \end{itemize}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    Particles are basis vectors of irreps (irreducible representations).
+
+    Irreps used in the SM:
+    \begin{itemize}
+        \item $d = 3$ for color (quarks)
+        \item $d = 2$ for weak isospin (doublets)
+        \item $d = 1$ abelian irrep for hypercharge
+        \item Trivial irrep
+    \end{itemize}
+\end{frame}
+
 \subsection{Georgi-Glashow model}
 
 \begin{frame}
-    Particles are basis vectors of irreps.
+    \frametitle{Extension to SU(5)}
+    \begin{block}{The quest}
+        From $\mathsf{SU}(3) \times \mathsf{SU}(2) \times \mathsf U(1)$ to $\mathsf{SU}(5)$.
+    \end{block}
+
+    \begin{block}{Dimensionality}
+        \begin{itemize}
+            \item $\mathsf{SU}(N)$ has dimension $N^2 - 1$
+            \item Standard model has $8 \cdot 3 \cdot 1 = 24$ dimensions
+            \item SU(5) has 24 dimensions
+        \end{itemize}
+
+        So far, so good
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Irreducible representations of SU(5)}
 \end{frame}
 
 \begin{frame}
     \frametitle{Multiplets of SU(5)}
+
     \[
         \begin{pmatrix}
             \bar\nuup_\mathsf L
@@ -353,12 +398,12 @@
     \parencite{Baez/Algebra_GUT}
 \end{frame}
 
-\subsection{Pati-Salam model}
-
-\begin{frame}
-    \parencite{Wu/Proton-decay}
-
-\end{frame}
+%\subsection{Pati-Salam model}
+%
+%\begin{frame}
+%    \parencite{Wu/Proton-decay}
+%
+%\end{frame}
 
 \section{Proton decay}
 
