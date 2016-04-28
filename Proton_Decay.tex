@@ -15,7 +15,11 @@
 {
     \begin{frame}
         \sectionpage
-        \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/shaded/hide, subsubsectionstyle=hide/hide/hide]
+        \tableofcontents[
+            sectionstyle=show/shaded,
+            subsectionstyle=hide/hide/hide,
+            subsubsectionstyle=hide/hide/hide
+        ]
     \end{frame}
 }
 
@@ -23,7 +27,11 @@
 {
     \begin{frame}
         \subsectionpage
-        \tableofcontents[sectionstyle=show/shaded, subsectionstyle=show/shaded/hide, subsubsectionstyle=hide/hide/hide]
+        \tableofcontents[
+            sectionstyle=show/hide,
+            subsectionstyle=show/shaded/hide,
+            subsubsectionstyle=hide/hide/hide
+        ]
     \end{frame}
 }
 
@@ -54,6 +62,8 @@
 \begin{frame}
     \titlepage
 \end{frame}
+
+\section{Standard model}
 
 \begin{frame}
     \frametitle{Standard model}
@@ -174,27 +184,43 @@
         \begin{pmatrix}
             \mathsf e^+_\mathsf R \\
             \bar\nuup_\mathsf R \\
-            \mathsf d_\mathsf R
+            \textcolor{red}  {\mathsf d}_\mathsf R \\
+            \textcolor{green}{\mathsf d}_\mathsf R \\
+            \textcolor{blue} {\mathsf d}_\mathsf R
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
             \mathsf e^+_\mathsf L \\
-            \mathsf u_\mathsf L \\
-            \mathsf d_\mathsf L \\
-            \bar{\mathsf u}_\mathsf L
+            \textcolor{red}  {\mathsf u}_\mathsf L \\
+            \textcolor{green}{\mathsf u}_\mathsf L \\
+            \textcolor{blue} {\mathsf u}_\mathsf L \\
+            \textcolor{red}  {\mathsf d}_\mathsf L \\
+            \textcolor{green}{\mathsf d}_\mathsf L \\
+            \textcolor{blue} {\mathsf d}_\mathsf L \\
+            \bar{\textcolor{red}  {\mathsf u}}_\mathsf L \\
+            \bar{\textcolor{green}{\mathsf u}}_\mathsf L \\
+            \bar{\textcolor{blue} {\mathsf u}}_\mathsf L
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
             \mathsf e^-_\mathsf R \\
-            \bar{\mathsf u}_\mathsf R \\
-            \bar{\mathsf d}_\mathsf R \\
-            \mathsf u_\mathsf R
+            \bar{\textcolor{red}  {\mathsf u}}_\mathsf R \\
+            \bar{\textcolor{green}{\mathsf u}}_\mathsf R \\
+            \bar{\textcolor{blue} {\mathsf u}}_\mathsf R \\
+            \bar{\textcolor{red}  {\mathsf d}}_\mathsf R \\
+            \bar{\textcolor{green}{\mathsf d}}_\mathsf R \\
+            \bar{\textcolor{blue} {\mathsf d}}_\mathsf R \\
+            \textcolor{red}  {\mathsf u}_\mathsf R \\
+            \textcolor{green}{\mathsf u}_\mathsf R \\
+            \textcolor{blue} {\mathsf u}_\mathsf R
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
             \nuup_\mathsf L \\
             \mathsf e^-_\mathsf L \\
-            \bar{\mathsf d}_\mathsf L
+            \bar{\textcolor{red}  {\mathsf d}}_\mathsf L \\
+            \bar{\textcolor{green}{\mathsf d}}_\mathsf L \\
+            \bar{\textcolor{blue} {\mathsf d}}_\mathsf L
         \end{pmatrix}
         \qquad
         \begin{pmatrix}
@@ -381,16 +407,34 @@
     \begin{itemize}
         \item Running since 1996
         \item No decay observed
+            \pause
         \item Lifetime at least \SI{e34}{\year}
+        \item Rules out SU(5) GUT
     \end{itemize}
 
     \parencite{super-k/proton_decay}
 \end{frame}
 
+\section{Conclusion}
+
+\begin{frame}
+    \frametitle{Conclusion}
+
+    \begin{itemize}
+        \item Proton stable in Standard Model
+        \item SU(5) GUT predicts decay
+        \item Lifetime at least \SI{e34}{\year} \parencite{super-k/proton_decay}
+        \item SU(5) GUT ruled out
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%
+
+\section*{End}
+
 \begin{frame}
     \titlepage
 \end{frame}
-
 
 \nocite{tikz-feynman}
 
