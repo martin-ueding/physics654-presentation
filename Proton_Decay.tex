@@ -2,8 +2,9 @@
 %
 \documentclass[english, fleqn]{beamer}
 
-\usetheme{Malmoe}
 
+\usetheme{Malmoe}
+\useoutertheme{infolines}
 \usepackage[bibatend]{header}
 
 \newcommand\qqandqq{\qquad\text{and}\qquad}
@@ -191,7 +192,7 @@
 \subsection{Pati-Salam model}
 
 \begin{frame}
-    \parencite{Wu/Proton_decay}
+    %\parencite{Wu/Proton_decay}
 \end{frame}
 
 \section{Proton decay}
@@ -282,7 +283,7 @@
 
     \begin{block}{Proton lifetime}
         \begin{itemize}
-            \item We would notice \SI{1}{\sievert\per\year}
+            \item We would notice \SI{1}{\gray\per\year}
             \item Body consists half of protons
             \item Proton lifetime greater than \SI{7e23}{\second} or \SI{2e16}{\year}
         \end{itemize}
@@ -316,12 +317,14 @@
     \frametitle{Example proton decay event}
 
     \centering
-    \includegraphics[width=0.9\linewidth]{Figures/epi0_nice_event.png}
+    \includegraphics[width=0.8\linewidth]{Figures/epi0_nice_event.png}
     % TODO http://hep.bu.edu/~superk/pdk.html
 \end{frame}
 
 \begin{frame}
     References
+
+    \nocite{tikz-feynman}
 
     \printbibliography
 \end{frame}
