@@ -101,7 +101,7 @@
                     \midrule
                     $\mathsf{SU}(3)$ & Strong & Color & Gluon \\
                     $\mathsf{SU}(2)$ & Weak & Weak Isospin & W, Z \\
-                    $\mathsf{SU}(1)$ & EM & Hypercharge & B, $\gammaup$
+                    $\mathsf{U}(1)$ & EM & Hypercharge & B, $\gammaup$
                 \end{tabular}
             \end{block}
         \end{column}
@@ -110,11 +110,39 @@
     \
 
     \begin{block}{Gauge group}
-        $\mathsf{SU}(3) \times \mathsf{SU}(2) \times \mathsf{SU}(1)$
+        $\mathsf{U}(1) \times \mathsf{SU}(2) \times \mathsf{SU}(3)$
     \end{block}
 
 \end{frame}
 
+
+\begin{frame}
+    \frametitle{Standard model}
+
+    \begin{columns}[t]
+        \begin{column}{.5\linewidth}
+            \begin{block}{Neutron decay}
+                We have $\mathsf n \to \mathsf p + \mathsf e^- \bar\nuup_{\mathsf e}$:
+
+                \
+
+                \includegraphics{beta}
+            \end{block}
+        \end{column}
+        \pause
+        \begin{column}{.5\linewidth}
+            \begin{block}{Proton decay}
+                \begin{itemize}
+                    \item Proton is lightest nucleon
+                    \item \alert{Proton is stable in standard model}
+                    \item Except for chiral anomaly, extremely suppressed
+                        \parencite[6]{wiesenfeldt/dissertation}
+                        (\SI{e70}{\year}?)
+                \end{itemize}
+            \end{block}
+        \end{column}
+    \end{columns}
+\end{frame}
 \section{Grand unified theories}
 
 \subsection{Motivation}
@@ -191,8 +219,6 @@
 \end{frame}
 
 \begin{frame}
-    % TODO Does this really apply?
-
     \frametitle{Matter and anti-matter asymmetry}
 
     Why is there more matter than anti-matter?
@@ -302,7 +328,7 @@
         \begin{column}{.45\textwidth}
             \begin{itemize}
                 \item Lepton part doublet under $W$.
-                \item Quark part \enquote{trivial} under $W$.
+                \item Color part \enquote{trivial} under $W$.
                 \item Lepton part trivial under $C$.
                 \item Quark part triplet under $C$.
                 \item Reducible into irreps
@@ -388,7 +414,7 @@
 \begin{frame}
     \frametitle{Extension to SU(5)}
     \begin{block}{The quest}
-        From $\mathsf{SU}(3) \times \mathsf{SU}(2) \times \mathsf U(1)$ to $\mathsf{SU}(5)$.
+        From $\mathsf{U}(1) \times \mathsf{SU}(2) \times \mathsf{SU}(3)$ to $\mathsf{SU}(5)$.
     \end{block}
 
     \begin{block}{Dimensionality}
@@ -399,6 +425,8 @@
         \end{itemize}
 
         So far, so good
+
+        Follow \fullcite{Baez/Algebra_GUT}
     \end{block}
 \end{frame}
 
@@ -842,33 +870,6 @@
 \section{Proton decay}
 
 \begin{frame}
-    \frametitle{Standard model}
-
-    \begin{columns}[t]
-        \begin{column}{.5\linewidth}
-            \begin{block}{Neutron decay}
-                We have $\mathsf n \to \mathsf p + \mathsf e^- \bar\nuup_{\mathsf e}$:
-
-                \
-
-                \includegraphics{beta}
-            \end{block}
-        \end{column}
-        \pause
-        \begin{column}{.5\linewidth}
-            \begin{block}{Proton decay}
-                \begin{itemize}
-                    \item Proton is lightest nucleon
-                    \item \alert{Proton is stable in standard model}
-                \end{itemize}
-            \end{block}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\subsection{Pion + positron}
-
-\begin{frame}
     \frametitle{The X boson}
 
     \begin{columns}[t]
@@ -894,11 +895,12 @@
                     Hypercharge & $5/3$ \\
                     $B - L$ & $2/3$
                 \end{tabular}
+
+                \parencite{wikipedia/x_y_bosons}
             \end{block}
         \end{column}
     \end{columns}
 
-    % TODO https://en.wikipedia.org/wiki/X_and_Y_bosons
 \end{frame}
 
 \begin{frame}
@@ -1023,7 +1025,7 @@
     \parencite{super-k/proton_decay}
 \end{frame}
 
-\section{Conclusion}
+\section*{Conclusion}
 
 \begin{frame}
     \frametitle{Conclusion}
@@ -1033,6 +1035,16 @@
         \item SU(5) GUT predicts decay
         \item Lifetime at least \SI{e34}{\year} \parencite{super-k/proton_decay}
         \item SU(5) GUT ruled out
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outlook}
+
+    \begin{itemize}
+        \item SO(10)
+        \item SUSY
+        \item Hyper-K
     \end{itemize}
 \end{frame}
 
