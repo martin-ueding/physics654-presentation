@@ -69,6 +69,10 @@
     \titlepage
 \end{frame}
 
+\begin{frame}
+    \titlepage
+\end{frame}
+
 \section{Standard model}
 
 \begin{frame}
@@ -219,7 +223,7 @@
 
     \begin{itemize}
         \item Representation $D^\Gamma$ maps group elements to linear operators
-        \item Must not be faithful
+        \item Not necessarily faithful
         \item Multiple representations $\Gamma$ possible
     \end{itemize}
 
@@ -354,6 +358,10 @@
         $\setname C_{-2/3} \otimes \setname C \otimes \setname C^3$ \\
         \bottomrule
     \end{tabular}
+
+    \
+
+    $\C_Y$ defined via $\alpha \cdot \C_Y = \alpha^{3Y} \C_Y$
 \end{frame}
 
 \begin{frame}
@@ -521,7 +529,7 @@
                     \end{pmatrix}
                 \]
                 
-                That is unitary for any $\alpha \in \C$
+                That is unitary for any $\alpha \in \C$.
             \end{block}
         \end{column}
     \end{columns}
@@ -544,11 +552,13 @@
 
     \pause
 
-    Is that an isomorphism?
-
-    No, it has a kernel $(\alpha, \alpha^{-3}, \alpha^2)$ for $\alpha^6 = 1$.
-
-    That is a $\setname Z_6$ kernel (finite group).
+    \begin{block}{Is that an isomorphism?}
+        \begin{itemize}
+            \item No, it has a kernel $(\alpha, \alpha^{-3}, \alpha^2)$.
+            \item For $\alpha^6 = 1$ we have $\alpha^{-3} \in \mathsf{SU}(2)$ and $\alpha^{2} \in \mathsf{SU}(3)$
+            \item That is a $\setname Z_6$ kernel (finite group).
+        \end{itemize}
+    \end{block}
 \end{frame}
 
 \begin{frame}
@@ -600,13 +610,19 @@
 
     It works!
     \[
-        G_\text{SM} / \Z^6 \simeq \mathsf S(\mathsf U(2) \times \mathsf U(3)) \to \mathsf{SU}(5)
+        G_\text{SM} / \Z^6 \simeq \mathsf S(\mathsf U(2) \times \mathsf U(3)) \subset \mathsf{SU}(5)
     \]
+
+    We have a group isomorphism
 \end{frame}
 
 \begin{frame}
     \frametitle{Irreducible representations of SU(5)}
     \framesubtitle{Overview}
+
+    How to represent $F \oplus F^*$ on SU(5)?
+
+    \
 
     Exterior algebra:
     \[
@@ -627,7 +643,7 @@
 
 \begin{frame}
     \frametitle{Irreducible representations of SU(5)}
-    \framesubtitle{First one}
+    \framesubtitle{Zeroth one}
 
     Easiest ones: $\Lambda^0 \C^5 \simeq \C$ and $\Lambda^5 \C^5 \simeq \C$
 
@@ -643,18 +659,110 @@
 
 \begin{frame}
     \frametitle{Irreducible representations of SU(5)}
-    \framesubtitle{Second one}
+    \framesubtitle{First one}
 
     Next one: $\Lambda^1 \C^5 \simeq \C^5$
 
-    
+    \begin{itemize}
+        \item 
 
-    We could do
-    \begin{align*}
-        \Lambda^0 \C^5 &= \Span(\nuup_\mathsf R) \\
-        \Lambda^5 \C^5 &= \Span(\bar \nuup_\mathsf L) \,,
-    \end{align*}
-    or the other way around.
+    
+    This space is acted upon with
+    \[
+            \phi\colon 
+             (\alpha, g, h)  \mapsto
+            \begin{pmatrix}
+                \alpha^3 g & 0 \\
+                0 & \alpha^{-2} h
+            \end{pmatrix}
+    \]
+
+
+    \item
+        Preservation of $\C^2$ and $\C^3$ splitting
+    \item
+        $\C^2$ part transforms as $Y = 1$ in U(1), fundamentally under SU(2)
+        and trivially under SU(3). Left-handed lepton with $Y = 1$.
+    \item
+        No such lepton. Self-dual fundamental SU(2) representation. Right-handed anti-lepton with $Y = 1$.
+    \item
+        $\C^3$ part transforms as $Y = - 2/3$ in U(1), trivially under
+        SU(2) and fundamentally under SU(3). Right-handed down quark.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Irreducible representations of SU(5)}
+    \framesubtitle{First one}
+
+    $\Lambda^1 \C^5 \simeq \C^5$ describes:
+    \begin{itemize}
+        \item $\mathsf e^+_\mathsf R$
+        \item $\bar\nuup_\mathsf R$
+        \item $\textcolor{qred}  {\mathsf d}_\mathsf R$
+        \item $\textcolor{qgreen}{\mathsf d}_\mathsf R$
+        \item $\textcolor{qblue} {\mathsf d}_\mathsf R$
+    \end{itemize}
+
+    \
+
+    As spaces:
+    $\C^5 \simeq \C_1 \otimes \C^2 \otimes \C \quad\oplus\quad \C_{-2/3} \otimes \C \otimes \C^3$
+\end{frame}
+
+\begin{frame}
+    \frametitle{Irreducible representations of SU(5)}
+    \framesubtitle{Second one}
+
+    \begin{itemize}
+        \item Look at $\Lambda^2 \C^5$
+        \item Know already that $\C^5 \simeq \C_1 \otimes \C^2 \otimes \C \quad\oplus\quad \C_{-2/3} \otimes \C \otimes \C^3$
+        \item Use $\Lambda^2(V \oplus W) \simeq \Lambda^2 V \oplus (V \otimes W) \oplus \Lambda^2 W$
+    \end{itemize}
+
+        We obtain
+            \begin{align*}
+                \Lambda^2 \C^5
+                &\simeq
+                \Lambda^2(\C_1 \otimes \C^2 \otimes \C \quad\oplus\quad \C_{-2/3} \otimes \C \otimes \C^3) \\
+                &\simeq
+                \Lambda^2(\C_1 \otimes \C^2 \otimes \C)
+                \\&\quad\oplus\quad 
+                (\C_1 \otimes \C^2 \otimes \C) \otimes (\C_{-2/3} \otimes \C \otimes \C^3)
+                \\&\quad\oplus\quad 
+                \Lambda^2(\C_{-2/3} \otimes \C \otimes \C^3)
+            \end{align*}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Irreducible representations of SU(5)}
+    \framesubtitle{Second one}
+
+    \begin{tabular}{lll}
+        \toprule
+        Summand & Isomorphic to & Particles \\
+        \midrule
+        $\Lambda^2(\C_1 \otimes \C^2 \otimes \C)$ & $\C_2 \otimes \C \otimes \C$ & $\mathsf e^+_\mathsf L$ \\
+        $(\C_1 \otimes \C^2 \otimes \C) \otimes (\C_{-2/3} \otimes \C \otimes \C^3)$ & $\C_{1/3} \otimes \C^2 \otimes \C^3$ & $\mathsf u_\mathsf L$ and $\mathsf d_\mathsf L$ \\
+        $\Lambda^2(\C_{-2/3} \otimes \C \otimes \C^3)$ & $\C_{-4/3} \otimes \C \otimes \C^3$ & $\bar{\mathsf u}_\mathsf L$ \\
+        \bottomrule
+    \end{tabular}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Irreducible representations of SU(5)}
+    \framesubtitle{Last three ones}
+
+    \begin{itemize}
+        \item 
+            Still have $\Lambda^3 \C^5$, $\Lambda^4 \C^5$ and $\Lambda^5 \C^5$
+        \item
+            Those are Hodge-Dual to the others
+        \item
+            Hodge-Dual corresponds to binary complement
+        \item
+            Binary complement is anti-particle
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
