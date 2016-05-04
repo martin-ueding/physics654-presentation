@@ -416,6 +416,8 @@
     \begin{block}{The quest}
         From $\mathsf{U}(1) \times \mathsf{SU}(2) \times \mathsf{SU}(3)$ to $\mathsf{SU}(5)$.
     \end{block}
+    
+    \pause
 
     \begin{block}{Dimensionality}
         \begin{itemize}
@@ -423,11 +425,12 @@
             \item Standard model has $8 \cdot 3 \cdot 1 = 24$ dimensions
             \item SU(5) has 24 dimensions
         \end{itemize}
-
         So far, so good
-
-        Follow \fullcite{Baez/Algebra_GUT}
     \end{block}
+        
+    \pause
+
+    Follow \fullcite{Baez/Algebra_GUT}
 \end{frame}
 
 \begin{frame}
@@ -870,6 +873,39 @@
 \section{Proton decay}
 
 \begin{frame}
+    \frametitle{New gauge bosons}
+
+    \begin{columns}
+        \begin{column}{.5\linewidth}
+            \begin{block}{Standard model}
+                \begin{itemize}
+                    \item 8 SU(3) gluons
+                    \item 3 SU(2) $W$-bosons
+                    \item 1 U(1) $Y$-boson
+                \end{itemize}
+
+                Makes 12 gauge bosons.
+            \end{block}
+        \end{column}
+        \pause
+        \begin{column}{.5\linewidth}
+            \begin{block}{SU(5) GUT}
+                \begin{itemize}
+                    \item 12 standard model bosons
+                    \item 12 $X$ and $Y$ bosons
+                \end{itemize}
+
+                24 bosons in total.
+
+                Matches dimension $5^2 - 1 = 24$ of SU(5) group.
+            \end{block}
+        \end{column}
+    \end{columns}
+
+
+\end{frame}
+
+\begin{frame}
     \frametitle{The X boson}
 
     \begin{columns}[t]
@@ -895,12 +931,45 @@
                     Hypercharge & $5/3$ \\
                     $B - L$ & $2/3$
                 \end{tabular}
-
-                \parencite{wikipedia/x_y_bosons}
             \end{block}
         \end{column}
     \end{columns}
 
+    \parencite{wikipedia/x_y_bosons}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Y boson}
+
+    \begin{columns}[t]
+        \begin{column}{.5\textwidth}
+            \begin{block}{Decay modes}
+                \begin{gather*}
+                    \mathsf Y \to \mathsf e^+ + \bar{\mathsf u} \\
+                    \mathsf Y \to \mathsf u + \mathsf d \\
+                    \mathsf Y \to \bar{\mathsf u} + \bar{\nuup}_\mathsf e
+                \end{gather*}
+            \end{block}
+        \end{column}
+        \begin{column}{.5\textwidth}
+            \begin{block}{Properties}
+
+                \
+
+                \begin{tabular}{ll}
+                    Mass & $\approx \SI{e15}{\giga\electronvolt}$ \\
+                    Electric charge & $+1/3$ \\
+                    Color charge & triplet \\
+                    Spin & 1 \\
+                    Weak isospin $z$ & $-1/2$ \\
+                    Hypercharge & $5/3$ \\
+                    $B - L$ & $2/3$
+                \end{tabular}
+            \end{block}
+        \end{column}
+    \end{columns}
+
+    \parencite{wikipedia/x_y_bosons}
 \end{frame}
 
 \begin{frame}
@@ -918,12 +987,31 @@
     \end{center}
 \end{frame}
 
+\begin{frame}
+    \frametitle{Decay rate estimation}
+
+    \begin{itemize}
+        \item Propagator has $M_\mathsf X^{-2}$
+        \item Amplitude has $\alpha_\mathsf U^2 M_\mathsf X^{-4}$
+        \item Decay rate $\Gamma$ obtains $M_\mathsf p^5$
+    \end{itemize}
+
+    \[
+        \tau_\mathsf p = \frac{1}{\Gamma} \approx \frac{M_\mathsf X^4}{\alpha_\mathsf U^2 M_\mathsf p^5}
+    \]
+
+    At the GUT scale $1/40 \lesssim \alpha_\mathsf U \lesssim 1/20$.
+
+    \parencite{pse/estimate_mass}
+\end{frame}
+
 
 \section{Experiments}
 
 \subsection{Quick estimation}
 
 \begin{frame}
+    \frametitle{Argument by Maurice Goldhaber (1977)}
     \begin{block}{Observation}
         Our bodies are not very radioactive.
     \end{block}
@@ -938,11 +1026,11 @@
         \end{itemize}
     \end{block}
 
-    \nocite{wikipedia/groessenordnung-aequivalentdosis}
+    \parencite{wikipedia/groessenordnung-aequivalentdosis}
+    \parencite{Murayama/Matter_Instability}
 \end{frame}
 
 \subsection{Super Kamiokande}
-
 
 {
     \setbeamertemplate{background canvas}{%
@@ -1018,8 +1106,8 @@
         \item Running since 1996
         \item No decay observed
             \pause
-        \item Lifetime at least \SI{e34}{\year}
-        \item Rules out SU(5) GUT
+        \item Lifetime in $\mathsf p \to \mathsf e^+ \piup^0$ channel at least \SI{e34}{\year}
+        \item Severe limits on SU(5) GUT
     \end{itemize}
 
     \parencite{super-k/proton_decay}
@@ -1034,7 +1122,8 @@
         \item Proton stable in Standard Model
         \item SU(5) GUT predicts decay
         \item Lifetime at least \SI{e34}{\year} \parencite{super-k/proton_decay}
-        \item SU(5) GUT ruled out
+        \item GUT scale around \SI{e15}{\giga\electronvolt}
+        \item SU(5) GUT severely limited
     \end{itemize}
 \end{frame}
 
@@ -1042,9 +1131,10 @@
     \frametitle{Outlook}
 
     \begin{itemize}
-        \item SO(10)
+        \item SO(10), SU(8), O(16), …
         \item SUSY
         \item Hyper-K
+        \item DUNE (Deep Underground Neutrino Experiment) with LArgon
     \end{itemize}
 \end{frame}
 
